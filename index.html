@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0.1.css">
+<link rel="stylesheet" type="text/css" href="css/gc2y73e.css">
+
+<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0.1.js"></script>
+<script type="text/javascript" src="js/gc2y73e.js"></script>
+</head>
+<body>
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>GC2Y73E</h1>
+	</div>
+	<div data-role="content">
+		<a href="#page2" data-role="button" data-inset="true">Auswahl</a>
+	</div>
+	<div data-role="footer">GC2Y73E - by superudo</div>
+</div>
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Farbwahl</h1>
+	</div>
+	<div data-role="content">
+	<div id="colorSelector">
+		<ul data-role="listview" data-inset="true">
+			<li><a href="#page3" id="btnColBlue"><div  class="col_field col_blue">blau</div></a></li>
+			<li><a href="#page3" id="btnColYellow"><div class="col_field col_yellow">gelb</div></a></li>
+			<li><a href="#page3" id="btnColBrown"><div class="col_field col_brown">braun</div></a></li>
+			<li><a href="#page3" id="btnColCyan"><div class="col_field col_cyan">hellblau</div></a></li>
+			<li><a href="#page3" id="btnColRed"><div class="col_field col_red">rot</div></a></li>
+			<li><a href="#page3" id="btnColWhite"><div class="col_field col_white">weiß</div></a></li>
+			<li><a href="#page3" id="btnColMagenta"><div class="col_field col_magenta">pink</div></a></li>
+			<li><a href="#page3" id="btnColBlack"><div class="col_field col_black">schwarz</div></a></li>
+			<li><a href="#page3" id="btnColOrange"><div class="col_field col_orange">orange</div></a></li>
+			<li><a href="#page3" id="btnColGreen"><div class="col_field col_green">grün</div></a></li>
+		</ul>
+	</div>
+	</div>
+	<div data-role="footer">GC2Y73E - by superudo</div>
+</div>
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<a data-rel="back" href="#page2">Farben</a>
+		<h1>Zahlen</h1>
+	</div>
+	<div data-role="content">
+		<div id="numberSelector">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#page4" data-role="button" id="btnNr0">0</a>
+				<a href="#page4" data-role="button" id="btnNr1">1</a>
+				<a href="#page4" data-role="button" id="btnNr2">2</a>
+				<a href="#page4" data-role="button" id="btnNr3">3</a>
+				<a href="#page4" data-role="button" id="btnNr4">4</a>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#page4" data-role="button" id="btnNr5">5</a>
+				<a href="#page4" data-role="button" id="btnNr6">6</a>
+				<a href="#page4" data-role="button" id="btnNr7">7</a>
+				<a href="#page4" data-role="button" id="btnNr8">8</a>
+				<a href="#page4" data-role="button" id="btnNr9">9</a>
+			</div>
+		</div>
+	<div data-role="footer">GC2Y73E - by superudo</div>
+</div>
+<div data-role="page" id="page4">
+	<div data-role="header">Ergebnis</div>
+	<div data-role="content">
+		<p>Die magische Scheibe pulsiert in einem fahlen Licht, kleine Edelsteine beginnen zu leuchten und bilden Zahlen und Buchstaben, die nur die Eingeweihten zu deuten in der Lage sind:</p>
+		<div id="coordNorth" class="coord"></div>
+		<div id="coordEast" class="coord"></div>
+	</div>
+	<div data-role="footer">GC2Y73E - by superudo</div>
+</div>
+</body>
+</html>
