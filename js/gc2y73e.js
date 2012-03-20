@@ -32,7 +32,7 @@ var magicDisc = (function () {
 			lastDigits = "000";
 
 		if ((this.colorSelection > -1) && (this.numberSelection > -1)) {
-			lastDigits = Array.join(solutionsArray[(this.colorSelection + this.numberSelection) % 10], "");
+			lastDigits = solutionsArray[(this.colorSelection + this.numberSelection) % 10].join("");
 		} 
 		
 		return goTo + lastDigits;
