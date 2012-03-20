@@ -1,6 +1,10 @@
 ﻿var magicDisc = (function () {
     var numbersN = [],
-		numbersE = [];
+		numbersE = [],
+		colors = ["navy", "yellow", "#552200", 
+		          "cyan", "red", "white", 
+		          "magenta", "black", "#FF6600", 
+		          "#007700"];
 
     numbersN[0] = [2, 7, 4];
     numbersN[1] = [4, 4, 7];
@@ -66,6 +70,14 @@
 
         getSolutionEast: function () {
             return getSolution("E 006° 56.", numbersE, this.selection);
+        },
+        
+        getSelectionColor: function () {
+        	var value = "";
+        	if ((this.selection.color > 0) && (this.selection.color <= 10)) {
+        		value = colors[this.selection.color];
+        	}
+        	return value;
         }
     };
 })();

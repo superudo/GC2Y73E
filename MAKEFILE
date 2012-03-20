@@ -1,0 +1,42 @@
+TARGETDIR=~/Dropbox/Public/gc/GC2Y73E
+SOURCEDIR=~/public_html/GC2Y73E
+
+all: $(TARGETDIR)/index.html $(TARGETDIR)/index-dbg.html $(TARGETDIR)/nonumber.html \
+$(TARGETDIR)/css/gc2y73e.min.css $(TARGETDIR)/js/gc2y73e.min.js $(TARGETDIR)/js/magic-disc.min.js \
+$(TARGETDIR)/css/gc2y73e.chirp.css $(TARGETDIR)/js/gc2y73e.chirp.js $(TARGETDIR)/js/magic-disc.chirp.js
+
+$(SOURCEDIR)/css/gc2y73e.min.css: css/gc2y73e.chirp.css
+	yui-compressor --type css $< -o $@
+
+$(SOURCEDIR)/js/gc2y73e.min.js: js/gc2y73e.chirp.js
+	yui-compressor --type js $< -o $@
+
+$(SOURCEDIR)/js/magic-disc.min.js: js/magic-disc.chirp.js
+	yui-compressor --type js $< -o $@
+
+$(TARGETDIR)/index.html: $(SOURCEDIR)/index.html
+	cp $< $@
+
+$(TARGETDIR)/index-dbg.html: $(SOURCEDIR)/index-dbg.html
+	cp $< $@
+
+$(TARGETDIR)/nonumber.html: $(SOURCEDIR)/nonumber.html
+	cp $< $@
+
+$(TARGETDIR)/css/gc2y73e.min.css: $(SOURCEDIR)/css/gc2y73e.min.css
+	cp $< $@
+
+$(TARGETDIR)/js/gc2y73e.min.js: $(SOURCEDIR)/js/gc2y73e.min.js
+	cp $< $@
+
+$(TARGETDIR)/js/magic-disc.min.js: $(SOURCEDIR)/js/magic-disc.min.js
+	cp $< $@
+
+$(TARGETDIR)/css/gc2y73e.chirp.css: $(SOURCEDIR)/css/gc2y73e.chirp.css
+	cp $< $@
+
+$(TARGETDIR)/js/gc2y73e.chirp.js: $(SOURCEDIR)/js/gc2y73e.chirp.js
+	cp $< $@
+
+$(TARGETDIR)/js/magic-disc.chirp.js: $(SOURCEDIR)/js/magic-disc.chirp.js
+	cp $< $@

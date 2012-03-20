@@ -35,10 +35,10 @@
 		</p>
 		<a href="#page2" data-role="button" data-inset="true">Beschwören...</a>
 	</div>
-	<div data-role="footer" data-position="fixed" data-id="myfooter"><h4>GC2Y73E - by superudo</h4></div>
+	<div data-role="footer"><h4>GC2Y73E - by superudo</h4></div>
 </div>
 <div data-role="page" id="page2">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header">
 		<h1>Farbe wählen</h1>
 	</div>
 	<div data-role="content">
@@ -60,36 +60,43 @@
 			</ul>
 		</div>
 	</div>
-	<div data-role="footer" data-position="fixed" data-id="myfooter"><h4>GC2Y73E - by superudo</h4></div>
+	<div data-role="footer"><h4>GC2Y73E - by superudo</h4></div>
 </div>
 <div data-role="page" id="page3">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header">
 		<a data-rel="back" href="#page2">Farben</a>
 		<h1>Zahl wählen</h1>
 	</div>
-	<div data-role="content">
+	<div data-role="content" id="colorBorderedContent">
 		<p>
-			Nun folgt die Auswahl der zugehörigen Zahl:
+			Nachdem ihr euch für eine Farbe entschieden habt, gilt es nun, die richtige Zahl auszuwählen, 
+			um die Feenmagie zu aktivieren. Nur die Kombination von Zahl und Farbe zur rechten Zeit kann
+			euch den richtigen Weg weisen.<br />
+			Trefft ihr aber die falsche Wahl, wird Leggums böser Zauber euch in die Irre führen! 
 		</p>
-		<div id="numberSelector">
-			<div data-role="controlgroup">
-				<a href="#page4" data-role="button">0</a>
-				<a href="#page4" data-role="button">1</a>
-				<a href="#page4" data-role="button">2</a>
-				<a href="#page4" data-role="button">3</a>
-				<a href="#page4" data-role="button">4</a>
-				<a href="#page4" data-role="button">5</a>
-				<a href="#page4" data-role="button">6</a>
-				<a href="#page4" data-role="button">7</a>
-				<a href="#page4" data-role="button">8</a>
-				<a href="#page4" data-role="button">9</a>
-			</div>
-		</div>
+		<select name="numberSel" id="numberSel">
+			<option data-placeholder="true" value="-1">Wähle eine Ziffer...</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+		</select>
+		<a id='lnkDialog' href="nonumber.html" data-rel="dialog" data-transition="pop" style='display:none;'></a>
+		<p>
+			Habt ihr eure Wahl getroffen, möge der Feenzauber nun seine Wirkung tun...
+		</p>
+		<a href="#page4" data-role="button" data-theme="b" id="submitNumber">So sei es!</a>
 	</div>
-	<div data-role="footer" data-position="fixed" data-id="myfooter"><h4>GC2Y73E - by superudo</h4></div>
+	<div data-role="footer"><h4>GC2Y73E - by superudo</h4></div>
 </div>
 <div data-role="page" id="page4">
-	<div data-role="header" data-position="fixed">
+	<div data-role="header">
 		<a href="#page3" data-rel="back">Zahlen...</a>
 		<h1>Ergebnis</h1>
 	</div>
@@ -105,7 +112,7 @@
 		<p>Möge der Zauber der Feen euch leiten!</p>
 		<a href="#page1" data-role="button" data-inset="true">Zauber wiederholen</a>
 	</div>
-	<div data-role="footer" data-position="fixed" data-id="myfooter"><h4>GC2Y73E - by superudo</h4></div>
+	<div data-role="footer"><h4>GC2Y73E - by superudo</h4></div>
 </div>
 </body>
 </html>

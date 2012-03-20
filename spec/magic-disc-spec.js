@@ -82,4 +82,9 @@ describe("magicDisc", function () {
         expect(magicDisc.getSolutionEast()).toEqual(expectedE);
 
     });
+    
+    it("should return blue", function () {
+    	magicDisc.setColorSelection(magicDisc.blue);
+    	expect(magicDisc.getSelectionColor()).toEqual("navy");
+    });
 });

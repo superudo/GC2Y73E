@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-.col_field 
+.col_field
 {
 	padding: 3px 5px;
 	-webkit-border-radius: 5px;
@@ -67,4 +67,9 @@
 {
 	background-color: #007700;
 	color: white;
+}
+
+.colorBorderedContent 
+{
+	border: 5px solid;
 }
