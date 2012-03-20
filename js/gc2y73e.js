@@ -31,8 +31,8 @@ var magicDisc = (function () {
 		var goTo = prefix,
 			lastDigits = "000";
 
-		if ((colorSelection > -1) && (numberSelection > -1)) {
-			lastDigits = Array.join(solutionsArray[(colorSelection + numberSelection) % 10], "");
+		if ((this.colorSelection > -1) && (this.numberSelection > -1)) {
+			lastDigits = Array.join(solutionsArray[(this.colorSelection + this.numberSelection) % 10], "");
 		} 
 		
 		return goTo + lastDigits;
@@ -51,11 +51,11 @@ var magicDisc = (function () {
 		green:   0,
 		
 		setColorSelection: function (val) {
-			colorSelection = val;
+			this.colorSelection = val;
 		},
 		
 		setNumberSelection: function (val) {
-			numberSelection = val - 1;
+			this.numberSelection = val - 1;
 		},
 		
 		getSolutionNorth: function () {
@@ -68,27 +68,26 @@ var magicDisc = (function () {
 	};
 })();
 
-function setSelectionData(val)
-{
-}
-
 $(document).ready(function () {
 	var i,
 	colorSelector = $('#colorSelector'),
 	numberSelector = $('#numberSelector');
 	
     for (i = 0; i < 9; i += 1) {
-    	$("a", colorSelector).eq(i+1).click({sel: i}, function (event) {
+    	$("a", colorSelector).eq(i).click({sel: i}, function (event) {
     		colorSelection = event.data.sel;
+    		console.log("Set colorSelection to " + event.data.sel);
 		});
-    	$("a", numberSelector).eq(i+1).click({sel: i+1}, function(event) {
+    	$("a", numberSelector).eq(i).click({sel: i+1}, function(event) {
     		numberSelection = event.data.sel;
+    		console.log("Set numberSelection to " + event.data.sel);
     	});
     }
     
-    $("#page4").on("pagebeforeshow", function () {
+    $("#page4").bind("pageshow", function () {
     	$("#coordNorth").text(magicDisc.getSolutionNorth());
     	$("#coordEast").text(magicDisc.getSolutionEast());
     });
+    
 });
 

@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html manifest="gc2y73e.appcache">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable = no">
+
+<link rel="apple-touch-icon" href="logo.png" >
+
+<title>GC2Y73E - Kleiner Drache Max, Abenteuer im Cacherland</title>
 <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0.1.css">
 <link rel="stylesheet" type="text/css" href="css/gc2y73e.css">
 
@@ -16,38 +23,51 @@
 		<h1>GC2Y73E</h1>
 	</div>
 	<div data-role="content">
-		<a href="#page2" data-role="button" data-inset="true">Auswahl</a>
+		<p>
+			Der Abenteurer zeigt dem kleinen Drachen Max eine magische Scheibe.
+			Darauf finden sich neben den Bildern eines Drachens und einer Fee 
+			farbige Felder und solche mit Nummern, die man gegeneinander verschieben kann.
+			Mit ihrer Hilfe lässt sich eine Feenmagie beschwören, die Max und seinem 
+			Freund bei ihrer Reise helfen wird. 
+		</p>
+		<a href="#page2" data-role="button" data-inset="true">Beschwören...</a>
 	</div>
 	<div data-role="footer">GC2Y73E - by superudo</div>
 </div>
 <div data-role="page" id="page2">
 	<div data-role="header">
-		<h1>Farbwahl</h1>
+		<h1>Farbe wählen</h1>
 	</div>
 	<div data-role="content">
-	<div id="colorSelector">
-		<ul data-role="listview" data-inset="true">
-			<li><a href="#page3" id="btnColBlue"><div  class="col_field col_blue">blau</div></a></li>
-			<li><a href="#page3" id="btnColYellow"><div class="col_field col_yellow">gelb</div></a></li>
-			<li><a href="#page3" id="btnColBrown"><div class="col_field col_brown">braun</div></a></li>
-			<li><a href="#page3" id="btnColCyan"><div class="col_field col_cyan">hellblau</div></a></li>
-			<li><a href="#page3" id="btnColRed"><div class="col_field col_red">rot</div></a></li>
-			<li><a href="#page3" id="btnColWhite"><div class="col_field col_white">weiß</div></a></li>
-			<li><a href="#page3" id="btnColMagenta"><div class="col_field col_magenta">pink</div></a></li>
-			<li><a href="#page3" id="btnColBlack"><div class="col_field col_black">schwarz</div></a></li>
-			<li><a href="#page3" id="btnColOrange"><div class="col_field col_orange">orange</div></a></li>
-			<li><a href="#page3" id="btnColGreen"><div class="col_field col_green">grün</div></a></li>
-		</ul>
-	</div>
+		<p>
+			Die Beschwörung beginnt mit der Auswahl einer Farbe:
+		</p>
+		<div id="colorSelector">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#page3" id="btnColBlue"><div  class="col_field col_blue">blau</div></a></li>
+				<li><a href="#page3" id="btnColYellow"><div class="col_field col_yellow">gelb</div></a></li>
+				<li><a href="#page3" id="btnColBrown"><div class="col_field col_brown">braun</div></a></li>
+				<li><a href="#page3" id="btnColCyan"><div class="col_field col_cyan">hellblau</div></a></li>
+				<li><a href="#page3" id="btnColRed"><div class="col_field col_red">rot</div></a></li>
+				<li><a href="#page3" id="btnColWhite"><div class="col_field col_white">weiß</div></a></li>
+				<li><a href="#page3" id="btnColMagenta"><div class="col_field col_magenta">pink</div></a></li>
+				<li><a href="#page3" id="btnColBlack"><div class="col_field col_black">schwarz</div></a></li>
+				<li><a href="#page3" id="btnColOrange"><div class="col_field col_orange">orange</div></a></li>
+				<li><a href="#page3" id="btnColGreen"><div class="col_field col_green">grün</div></a></li>
+			</ul>
+		</div>
 	</div>
 	<div data-role="footer">GC2Y73E - by superudo</div>
 </div>
 <div data-role="page" id="page3">
 	<div data-role="header">
 		<a data-rel="back" href="#page2">Farben</a>
-		<h1>Zahlen</h1>
+		<h1>Zahl wählen</h1>
 	</div>
 	<div data-role="content">
+		<p>
+			Nun folgt die Auswahl der zugehörigen Zahl:
+		</p>
 		<div id="numberSelector">
 			<div data-role="controlgroup" data-type="horizontal">
 				<a href="#page4" data-role="button" id="btnNr0">0</a>
@@ -64,14 +84,25 @@
 				<a href="#page4" data-role="button" id="btnNr9">9</a>
 			</div>
 		</div>
+	</div>
 	<div data-role="footer">GC2Y73E - by superudo</div>
 </div>
 <div data-role="page" id="page4">
-	<div data-role="header">Ergebnis</div>
+	<div data-role="header">
+		<a href="#page3" data-rel="back">Zahlen...</a>
+		<h1>Ergebnis</h1>
+	</div>
 	<div data-role="content">
-		<p>Die magische Scheibe pulsiert in einem fahlen Licht, kleine Edelsteine beginnen zu leuchten und bilden Zahlen und Buchstaben, die nur die Eingeweihten zu deuten in der Lage sind:</p>
-		<div id="coordNorth" class="coord"></div>
-		<div id="coordEast" class="coord"></div>
+		<p>Die magische Scheibe pulsiert in einem fahlen Licht, 
+		kleine Edelsteine beginnen zu leuchten und bilden Zahlen 
+		und Buchstaben, die nur die Eingeweihten zu deuten in der 
+		Lage sind:</p>
+		<ul data-role="listview" data-inset="true" data-theme="e">
+			<li><div id="coordNorth" class="coord"></div></li>
+			<li><div id="coordEast" class="coord"></div></li>
+		</ul>
+		<p>Möge der Zauber der Feen euch leiten!</p>
+		<a href="#page1" data-role="button" data-inset="true">Zauber wiederholen</a>
 	</div>
 	<div data-role="footer">GC2Y73E - by superudo</div>
 </div>
